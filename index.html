@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/main-nav.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>#100DaysOfCode - Day #05</title>
+</head>
+<body class="body">
+  
+  <header id="hero-section">
+    <nav class="navbar">
+      <section class="logo-section">
+        <a href="index.html">ADAM</a>
+      </section>
+      <nav class="navigation-section">
+        <ul class="register-login-links">
+          <li class="menu">
+            <i data-feather="menu" class="icon"></i>
+          </li>
+          <li class="register hidden">
+            <a href="">Register</a>
+          </li>
+          <li class="sep-line hidden">|</li>
+          <li class="login hidden">
+            <a href="">Login</a>
+          </li>
+        </ul>
+        <ul class="page-links">
+          <li class="link"><a href="#">Home</a></li>
+          <li class="link"  onmouseenter="openMenu()" onmouseleave="closeMenu()">
+            <a href="#">Shop<i data-feather="chevron-down" class="icon"></i></a>
+            <ul class="shop-links">
+              <li><a href="#">Suits</a></li>
+              <li><a href="#">Clothing</a></li>
+              <li><a href="#">Shoes</a></li>
+              <li><a href="#">Accessories</a></li>
+              <li><a href="#">Hot Sales</a></li>
+            </ul>
+          </li>
+          <li class="link"><a href="#">New Arrivals</a></li>
+          <li class="link">
+            <a href="#">Collections</a>
+          </li>
+          <li class="link"><a href="#">Blog</a></li>
+        </ul>
+        <ul class="nav-icons">
+          <li class="search-container">
+            <label for="search" onclick="openSearch()">
+              <i data-feather="search"></i>
+            </label>
+            <form action="" method="get" class="search-box">
+              <input type="search" name="search" id="search">
+              <button><i data-feather="search"></i></button>
+            </form>
+          </li>
+          <li class="nav-cart">
+            <img src="https://img.icons8.com/fluency-systems-regular/24/null/shopping-bag--v1.png"/>
+          </li>
+        </ul>
+      </nav>
+    </nav>
+
+    <section class="hero-content">
+      <section class="hero-img"></section>
+      <section class="hero-cta">
+        <h1>Explore Brand New Fashion Products.</h1>
+        <div class="line"></div>
+        <form action="" method="get">
+          <button>Show Me</button>
+        </form>
+      </section>
+      <section class="social-links">
+        <ul>
+          <li>
+            <a href="#">
+              <img src="https://img.icons8.com/fluency-systems-regular/20/null/instagram-new--v1.png" alt="Instagram Link"/>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="https://img.icons8.com/fluency-systems-regular/20/null/tiktok.png" alt="TikTok Link"/>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="https://img.icons8.com/fluency-systems-regular/20/null/twitter.png" alt="Twitter Link"/>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="https://img.icons8.com/fluency-systems-regular/20/null/youtube-play.png" alt="YouTube Link"/>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </section>
+  </header>
+
+  <main id="main-content">
+    <section class="info-section">
+      <div class="flex-info">
+        <i data-feather="truck" class="icon"></i>
+        <h3 class="info-text">Fast Shipping</h3>
+      </div>
+      <div class="flex-info">
+        <i data-feather="credit-card" class="icon"></i>
+        <h3 class="info-text">Secure Payment</h3>
+      </div>
+      <div class="flex-info">
+        <i data-feather="thumbs-up" class="icon"></i>
+        <h3 class="info-text">100% Satisfaction</h3>
+      </div>
+      <div class="flex-info">
+        <i data-feather="life-buoy" class="icon"></i>
+        <h3 class="info-text">Online Support</h3>
+      </div>
+    </section>
+
+    <section id="shop-sec">
+      <a href="">
+        <img src="./assets/men-suits-banner.png" alt="Suits For Men">
+        <button>Suits</button>
+      </a>
+      <a href="">
+        <img src="./assets/men-outfit-banner.png" alt="Clothes for Men">
+        <button>Clothes</button>
+      </a>
+      <a href="">
+        <img src="./assets/men-shoes-banner.png" alt="Shoes for Men">
+        <button>Shoes</button>
+      </a>
+      <a href="">
+        <img src="./assets/men-accessories-banner.png" alt="Accessories for Men">
+        <button>Accessories</button>
+      </img>
+    </section>
+
+    <section id="day-deal-sec">
+      <section class="left-sec">
+        <img src="./assets/deal-day-watch-2.png" alt="">
+      </section>
+      <section class="mid-sec">
+        <h2 class="deal-title">Deal of the Day</h2>
+        <h3 class="deal-text">Get this beaUtiful watch only today with 75% OFF</h3>
+        <div class="countdown-container">
+          <div class="countdown-el days-c">
+            <p class="text" id="days">00</p>
+            <span>day</span>
+          </div>
+          <div class="countdown-el hours-c">
+            <p class="text" id="hours">00</p>
+            <span>hour</span>
+          </div>
+          <div class="countdown-el minutes-c">
+            <p class="text" id="minutes">00</p>
+            <span>min</span>
+          </div>
+          <div class="countdown-el seconds-c">
+            <p class="text" id="seconds">00</p>
+            <span>sec</span>
+          </div>
+        </div>
+        <form action="" method="get">
+          <button>Get it now</button>
+        </form>
+      </section>
+      <section class="right-sec">
+        <img src="./assets/deal-day-watch-2.png" alt="">
+      </section>
+    </section>
+  </main>
+
+  <script>
+    feather.replace()
+  </script>
+  <script src="js/script.js"></script>
+  <script src="js/countdown.js"></script>
+
+</body>
+</html>

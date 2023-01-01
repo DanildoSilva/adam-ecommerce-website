@@ -1,0 +1,247 @@
+:root {
+  --primary-color: #D69764;
+  --secondary-color: #393D40;
+  --light-color: #F1EDEA;
+  --white-color: #fffbfb;
+  --grey-color: #636363;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+li, a {
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Grid Center */
+.logo-section,
+.search-container label,
+.nav-icons li,
+.page-links a,
+.search-box button {
+  display: grid;
+  place-items: center;
+}
+/* Display Flex */
+.navigation-section,
+.page-links,
+.nav-icons,
+.register-login-links,
+.link, .link a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 120px;
+  background-color: var(--light-color);
+}
+
+.logo-section {
+  height: 50%;
+  background-color: var(--white-color);
+  z-index: 50;
+}
+
+.logo-section a {
+  font-size: 25px;
+  font-weight: 200;
+  color: var(--secondary-color);
+  letter-spacing: 5px;
+}
+
+.navigation-section {
+  width: 100%;
+  height: 60px;
+  padding: 0 8%;
+}
+
+.register-login-links {
+  width: 150px;
+}
+.register-login-links a {
+  font-size: 14px;
+  color: var(--secondary-color);
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+.menu {
+  width: 24px;
+  height: 24px;
+  display: none;
+  cursor: pointer;
+}
+.menu .icon {
+  width: 24px;
+}
+
+.page-links {
+  width: 500px;
+  height: 100%;
+}
+.page-links li {
+  position: relative;
+  height: 100%;
+  padding: 0 10px;
+  opacity: .5;
+}
+.page-links a {
+  height: 100%;
+  font-size: 14px;
+  color: var(--secondary-color);
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+.page-links a .icon {
+  width: 24px;
+  padding-left: 3px;
+}
+.page-links li:hover {
+  background-color: var(--primary-color);
+  opacity: 1;
+}
+.page-links li:hover a {
+  color: var(--white-color);
+}
+.shop-links {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: var(--secondary-color);
+  display: none;
+  transition: all 500ms ease;
+}
+.shop-links a {
+  padding: 10px 10px 10px 0;
+}
+.shop-links-on {
+  display: block;
+  z-index: 20;
+}
+
+.nav-icons {
+  width: 150px;
+  justify-content: flex-end;
+}
+.search-box {
+  position: absolute;
+  top: 120px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  padding: 0 20%;
+  background-color: var(--light-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 500ms ease;
+  opacity: 0;
+  z-index: 0;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+.search-on{
+  height: 60px;
+  opacity: 1;
+}
+input[type="search"] {
+  width: 100%;
+  height: 60%;
+  padding: 0 20px;
+  outline: none;
+  background: none;
+  border: none;
+  border-left: 1px solid var(--secondary-color);
+  border-top: 1px solid var(--secondary-color);
+  border-bottom: 1px solid var(--secondary-color);
+}
+.search-box button {
+  width: 50px;
+  height: 60%;
+  outline: none;
+  border: none;
+  color: var(--secondary-color);
+  background-color: none;
+  border: none;
+  border-right: 1px solid var(--secondary-color);
+  border-top: 1px solid var(--secondary-color);
+  border-bottom: 1px solid var(--secondary-color);
+  cursor: pointer;
+}
+.nav-icons .nav-cart {
+  margin-left: 20px;
+}
+.search-container label,
+.nav-icons .nav-cart {
+  cursor: pointer;
+}
+.nav-icons .icon {
+  width: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .menu {
+    position: absolute;
+    display: block;
+    z-index: 50;
+  }
+  .register,
+  .sep-line,
+  .login {
+    position: absolute;
+    display: block;
+    top: 600px;
+    z-index: 25;
+    opacity: 1;
+    transition: all 500ms ease;
+  }
+  .register {
+    left: 100;
+  }
+  .sep-line {
+    left: 125px;
+  }
+  .login {
+    left: 150px;
+  }
+  .hidden {
+    display: none;
+    opacity: 0;
+  }
+  .navigation-section {
+    padding: 0 30px;
+  }
+  .page-links {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    padding: 120px 0;
+    background-color: var(--white-color);
+    transition: all 500ms ease;
+  }
+  .toggle-menu {
+    transform: translateX(250px);
+  }
+  .page-links li {
+    width: 100%;
+    height: auto;
+    padding: 20px 30px;
+  }
+  .search-box {
+    padding: 0 30px;
+  }
+}
