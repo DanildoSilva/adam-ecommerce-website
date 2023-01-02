@@ -3,7 +3,8 @@ const hoursEl = document.getElementById('hours');
 const minutesEl = document.getElementById('minutes');
 const secondsEl = document.getElementById('seconds');
 
-const launch = "Jan 02, 2023";
+const launch = new Date();
+launch.setDate(launch.getDate() + 1);
 
 function countdown() {
 

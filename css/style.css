@@ -11,6 +11,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
 }
 
 html {
@@ -65,7 +66,6 @@ img {
   font-size: 40px;
   font-weight: 400;
   letter-spacing: 2px;
-  text-transform: uppercase;
 }
 .hero-cta .line {
   width: 50px;
@@ -78,7 +78,6 @@ img {
   padding: 10px 20px;
   font-size: 12px;
   letter-spacing: 5px;
-  text-transform: uppercase;
   border: 1px solid var(--primary-color);
   background: none;
   outline: none;
@@ -131,15 +130,14 @@ img {
   text-transform: capitalize;
 }
 
+/* Shop Links Section */
 #shop-sec {
-  display: flex;
+  display: grid;
   width: auto;
   height: auto;
-  padding: 50px 4%;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
+  padding: 50px 8%;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 #shop-sec a {
   position: relative;
@@ -169,13 +167,13 @@ img {
   letter-spacing: 2px;
   color: var(--light-color);
   background-color: var(--primary-color);
-  text-transform: uppercase;
   text-align: left;
   outline: none;
   border: none;
   cursor: pointer;
 }
 
+/* Deal of the Day Section*/
 #day-deal-sec {
   display: flex;
   width: 100%;
@@ -213,7 +211,6 @@ img {
   font-weight: 400;
   color: var(--primary-color);
   letter-spacing: 2px;
-  text-transform: uppercase;
 }
 #day-deal-sec h3 {
   padding: 10px 0 30px;
@@ -221,7 +218,6 @@ img {
   font-weight: 400;
   color: var(--secondary-color);
   letter-spacing: 1px;
-  text-transform: uppercase;
 }
 .countdown {
   position: relative;
@@ -255,13 +251,11 @@ img {
 .countdown-el span {
   font-size: 14px;
   color: var(--primary-color);
-  text-transform: uppercase;
 }
 #day-deal-sec button {
   margin-top: 40px;
   font-size: 14px;
   letter-spacing: 3px;
-  text-transform: uppercase;
   color: var(--secondary-color);
   outline: none;
   border: none;
@@ -271,6 +265,106 @@ img {
 #day-deal-sec button:hover {
   transform: translateY(-5px);
   border-bottom: 1px solid var(--primary-color);
+}
+
+/* Featured Products & Best Sellers Products Sections */
+#featured-products,
+#best-sellers {
+  width: 100%;
+  height: auto;
+  padding: 50px 8%;
+  text-align: center;
+}
+#featured-products h2,
+#best-sellers h2 {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--primary-color);
+  letter-spacing: 2px;
+}
+#featured-products .line,
+#best-sellers .line {
+  width: 100px;
+  height: 1px;
+  margin: 15px auto;
+  background: #393d4052;
+}
+#featured-products p,
+#best-sellers p {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--secondary-color);
+  letter-spacing: 1px;
+}
+.products-container {
+  display: grid;
+  grid-gap: 2rem;
+  width: 100%;
+  height: auto;
+  padding-top: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.product-card {
+  height: 400px;
+  color: var(--secondary-color);
+  background: var(--light-color);
+  overflow: hidden;
+}
+.card-img {
+  width: 100%;
+  height: 60%;
+  padding: 30px 30px 0 30px;
+}
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.card-text {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 500ms ease;
+}
+.card-text h3 {
+  padding: 5px 0;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.card-text strong {
+  font-size: 24px;
+  font-weight: 600;
+}
+.product-card button {
+  width: 100%;
+  height: 12%;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  color: var(--white-color);
+  background: var(--secondary-color);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+.product-card button:hover {
+  background: var(--primary-color);
+}
+
+@media screen and (min-width: 768px) {
+  .product-card button {
+    transform: translateY(50px);
+  }
+  .product-card:hover .card-text {
+    height: 28%;
+  }
+  .product-card:hover button {
+    transform: translateY(0px);
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -308,7 +402,7 @@ img {
     display: none;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .flex-info {
     width: 100%;
   }
@@ -316,9 +410,26 @@ img {
     width: 100%;
   }
   #day-deal-sec {
-    margin: 0;
+    margin: 0 0 50px;
+    padding: 50px 0 0 0;
+    justify-content: center;
   }
   #day-deal-sec h3 {
     padding: 5%;
+  }
+  #day-deal-sec .left-sec {
+    order: 2;
+  }
+  #day-deal-sec .mid-sec {
+    order: 1;
+  }
+  #day-deal-sec .left-sec {
+    width: 100%;
+  }
+  .product-card .card-text {
+    height: 28%;
+  }
+  .product-card button {
+    transform: translateY(0px);
   }
 }
